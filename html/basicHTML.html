@@ -1,0 +1,155 @@
+<!--doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. More recently, the doctype is a historical artifact that needs to be included for everything else to work right.-->
+<!DOCTYPE html>
+
+<!--root element, setting the language is useful for screen readers and search engines-->
+<html lang="en">
+
+<!--acts as a container for everything you want to include on the HTML page, that isn't the content -->
+<head>
+    <!--useful to avoid encoding issues-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--title appears in the browser's tab, also used when the page is bookmarked-->
+    <!--title and description are used by search engines to display a search result-->
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--facebook meta-->
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+
+    <!--twitter meta-->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:type" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="">
+
+    <!--using .ico ensures it works as far back as Internet Explorer 6-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--CSS link-->
+    <link rel="stylesheet" href="">
+
+    <!--javascript link, defer ensures that scripts are loaded at the same time as the page avoiding applying javascript to HTML elements that do not yet exist-->
+    <script src="" defer></script>
+
+</head>
+
+<!--contains all the content that displays on the page-->
+<body>
+    <!--START SEMANTIC ELEMENTS-->
+    <!--semantics are important for SEO reasons-->
+    <!--use only one h1 and no more than 3 headings per page-->
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+    <!--paragraph-->
+    <p></p>
+
+    <!--ordered list-->
+    <ol> 
+        <li></li> <!--list item-->
+    </ol>
+    <!--unordered list-->
+    <ul> 
+        <li></li>
+    </ul>
+    <!--description lists-->
+    <dl>
+        <dt></dt>
+        <dd></dd> <!--description data-->
+    </dl>
+    
+    <!--these are recognized by screen readers and spoken in a different tone of voice-->
+    <!--when we want to add emphasis in spoken language, we stress certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics-->
+    <em></em>
+    <!--to emphasize important words, we tend to stress them in spoken language and bold them in written language-->
+    <strong></strong>
+
+    <!--almost any web content can be converted to a link; anchor tag and hypertext reference (URL), title appears as a tooltip when hovered-->
+    <a href="" title=""></a>
+    <!--use clear wording - useful for screen readers and search engines
+        use relative links wherever possible - useful for loading times-->
+    <!--when linking to non-HTML resources leave clear signposts and use the download attribute to provide a download wih a default save name-->
+    <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US" download="firefox-latest-64bit-installer.exe">Download Latest Firefox for Windows (64-bit) (English, US)</a>
+
+    <!--If a section of block level content is quoted from somewhere else, you should wrap it inside a <blockquote> element to signify this, and include a URL pointing to the source of the quote inside a cite attribute. -->
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+        <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+        Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+    </blockquote>
+
+    <!--inline quotations work in exactly the same way-->
+    <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't require paragraph breaks.</q></p>
+
+    <!--the <cite> element is meant to contain the title of the resource being quoted-->
+    <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't require paragraph breaks.</q> -- <a href="/en-US/docs/Web/HTML/Element/q">
+        <cite>MDN q page</cite></a>.</p>
+
+    <!--this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a title attribute.)-->
+    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+
+    <!--this wraps around your contact details, for example:-->
+    <address>
+        <p>
+          Chris Mills<br>
+          Manchester<br>
+          The Grim North<br>
+          UK
+        </p>
+      
+        <ul>
+          <li>Tel: 01234 567 890</li>
+          <li>Email: me@grim-north.co.uk</li>
+        </ul>
+      </address>
+
+    <!--subscript and superscript-->
+    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+    <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+    
+    <!--computer code-->
+    <code></code> <!--for marking up generic pieces of computer code-->
+    <pre></pre> <!--for retaining whitespace -->
+    <var></var> <!--for marking up variable names-->
+    <kbd></kbd> <!--for marking up keyboard input-->
+    <samp></samp> <!--for marking up the output of a computer program-->
+
+    <pre><code>var para = document.querySelector('p');
+        para.onclick = function() {
+          alert('Owww, stop poking me!');
+        }</code></pre>
+        
+        <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+        
+        <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+        
+        <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+        
+        <pre>$ <kbd>ping mozilla.org</kbd>
+        <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+        64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp>
+    </pre>
+
+    <!--for marking up times and dates in a machine-readable format-->
+    <time datetime="2016-01-20">20 January 2016</time>
+
+    <!--END SEMANTIC ELEMENTS-->
+
+    <!--START PRESENTATIONAL ELEMENTS-->
+    <b></b> <!--bold text-->
+    <i></i> <!--italic text-->
+    <u></u> <!--underlined text-->
+    <!--END PRESENTATIONAL ELEMENTS-->
+</body>
+</html>
