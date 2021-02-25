@@ -13,8 +13,9 @@
     <!--Search engines also read image filenames and count them towards SEO.-->
     <!--You should use an image editor to put your image at the correct size before putting it on your webpage-->
     <!--to provide semantics for an image and link the caption to the image-->
+    <!--setting loading to lazy the image will only be loaded when it's needed, improving load times-->
     <figure>
-        <img src="" alt="">
+        <img src="" alt="" loading="lazy">
         <figcaption></figcaption>
     </figure>
 
@@ -31,5 +32,13 @@
         <source src="viper.ogg" type="audio/ogg">
         <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
     </audio>
+
+    <!--allows you to embed content from other sources-->
+    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500" frameborder="0" allowfullscreen sandbox>
+        <p>
+            <a href="/en-US/docs/Glossary">Fallback link for browsers that don't support iframes
+            </a>
+        </p>
+    </iframe>
 </body>
 </html>
