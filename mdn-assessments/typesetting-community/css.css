@@ -117,3 +117,30 @@ a[href*="http"] {
     background-size: 16px 16px;
     padding-right: 19px;
 }
+
+ol {
+    list-style-type: none;
+    margin-left: -25px;
+}
+ol li {
+    padding-left: 3rem;
+}
+ol li:first-child {
+    background: url('phone.svg') no-repeat;
+    background-size: 1.8rem 1.8rem;
+    background-position: left center;
+}
+ol li:nth-child(2) {
+    background: url('brochure1.svg') no-repeat;
+    background-size: 1.8rem 1.8rem;
+    background-position: left bottom;
+}
+ol li:nth-child(3) {
+    background: url('book.svg') no-repeat;
+    background-size: 1.8rem 1.8rem;
+    background-position: left bottom;
+}
+
+h2 ~ ul{
+    list-style-type: square;
+}
