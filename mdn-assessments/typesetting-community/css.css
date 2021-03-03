@@ -1,0 +1,64 @@
+/* General setup */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Stick&family=Roboto&family=Hammersmith+One&family=Crimson+Text&display=swap');
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+
+html {
+    font-size: 10px;
+}
+
+h1, h2 {
+    font-family: 'Hammersmith One';
+}
+h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+p, li, a {
+    font-size: 2rem;
+    font-family: 'Crimson Text';
+}
