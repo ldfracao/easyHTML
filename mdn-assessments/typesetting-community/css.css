@@ -44,6 +44,7 @@
   
   /* WRITE YOUR CODE BELOW HERE */
 
+  /* global styles */
 html {
     font-size: 10px;
     font-family: 'Crimson Text';
@@ -54,6 +55,7 @@ body {
     word-spacing: 1px;
 }
 
+/* header styles */
 h1, h2 {
     font-family: 'Hammersmith One';
     letter-spacing: 0.25rem;
@@ -65,12 +67,27 @@ h1 {
 h2 {
     font-size: 3rem;
 }
-p, li, a {
-    font-size: 1.8rem;
-}
 h2 + p {
     text-indent: 20px;
 }
-/* p > a::after {
-    content: url('external-link-52.png');
-} */
+p, li, a {
+    font-size: 1.8rem;
+}
+
+/* navigation styles */
+nav li {
+    list-style-type: none;
+    text-align: center;
+}
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: #a66;
+    border: 1px solid #a66;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+nav li:hover a{
+    background-color: #a66;
+    color: white;
+}
