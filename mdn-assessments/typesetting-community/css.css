@@ -74,6 +74,26 @@ p, li, a {
     font-size: 1.8rem;
 }
 
+a {
+    outline: none;
+}
+a:link {
+    color: #a66;
+}
+a:visited {
+    color: rgb(245, 104, 104);
+}
+a:focus {
+    color: olive;
+}
+a:hover {
+    text-decoration: none;
+    color: #a66;
+}
+a:active {
+    color: red;
+}
+
 /* navigation styles */
 nav li {
     list-style-type: none;
@@ -90,4 +110,10 @@ nav li a {
 nav li:hover a{
     background-color: #a66;
     color: white;
+}
+
+a[href*="http"] {
+    background: url(external-link-52.png) no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
 }
