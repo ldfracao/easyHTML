@@ -1,3 +1,6 @@
+const p = document.querySelector('p');
+let count = 0;
+
 // setup canvas
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -94,6 +97,8 @@ while (balls.length < 25)
     size
   );
   balls.push(ball);
+  count++;
+  p.textContent = "Ball count: " + count;
 }
 
 function EvilCircle(x, y, exists) 
@@ -165,6 +170,8 @@ EvilCircle.prototype.collisionDetect = function()
       if (distance < this.size + balls[j].size) 
       {
         balls[j].exists = false;
+        count--;
+        p.textContent = 'Ball count: ' + count;
       }
     }
   }
